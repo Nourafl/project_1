@@ -5,5 +5,6 @@
 <%= @Service.name %> 
 <br>
 <% @Service.experts.each do |expert| %>
-            <%= link_to "#{expert.name}", expert_path(expert) %>
+          <li>  <%= link_to "#{expert.name}", expert_path(expert) %> </li>
 <% end %>
+
