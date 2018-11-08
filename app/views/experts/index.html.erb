@@ -1,9 +1,12 @@
 <%  @experts.each do |expert| %>
-
-<div>
-
-<h3><%= expert.name %> </h3> <%= expert.major %> <br>
-<%= expert.bio %> <br>
-<%= expert.major %> <br>
-</div>
+    <div>
+        <h3><%= link_to expert.name, expert_path(expert) %> </h3>
+        <%= expert.major %> <br>
+        <%= expert.bio %> <br>
+        <%= expert.major %> <br>
+    </div>
 <% end %>
+
+
+
+<%= link_to 'google', services_path %>

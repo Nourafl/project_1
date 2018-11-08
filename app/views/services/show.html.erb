@@ -1,2 +1,9 @@
-<h1>Services#show</h1>
-<p>Find me in app/views/services/show.html.erb</p>
+
+
+
+
+<%= @Service.name %> 
+<br>
+<% @Service.experts.each do |expert| %>
+            <%= link_to "#{expert.name}", expert_path(expert) %>
+<% end %>

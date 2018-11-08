@@ -4,6 +4,7 @@ class ExpertsController < ApplicationController
   end
 
   def show
+    @expert = Expert.find_by(id: params[:id])
   end
 
   def edit

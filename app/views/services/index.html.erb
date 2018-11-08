@@ -1,6 +1,7 @@
 <%  @services.each do |service| %>
 
-<div>
-<%= service.name %>
-</div>
+    <div>
+        <%=  link_to service.name, service_path(service) %> <br>
+        
+    </div>
 <% end %>

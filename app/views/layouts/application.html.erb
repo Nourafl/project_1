@@ -10,6 +10,9 @@
   </head>
 
   <body>
+  <%= link_to 'Log In', new_admin_session_path %>
+
+<%= link_to "Sign Up", new_admin_registration_path %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
