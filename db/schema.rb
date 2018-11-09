@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_08_223343) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_07_141116) do
+>>>>>>> parent of 2beb296... added email to experts
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +29,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_223343) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
   end
 
   create_table "posts", force: :cascade do |t|
