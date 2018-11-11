@@ -17,11 +17,11 @@
 //= require jquery
 //= require materialize
 //= require_tree .
-// $(document).on('turbolinks:load', function () {
-// $(".dropdown-trigger").dropdown();
-//     // $("div:contains('Early Intervention')").css("text-decoration", "underline");
-// });
+$(document).on('turbolinks:load', function () {
+$(".dropdown-trigger").dropdown();
+    // $("div:contains('Early Intervention')").css("text-decoration", "underline");
+});
 
-// $(document).ready(function () {
-//     $('select').formSelect();
-// });
+$(document).ready(function () {
+    $('select').formSelect();
+});
