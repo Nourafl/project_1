@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
-gem 'materialize-sass'
+
 gem 'jquery-rails'
 gem "letter_opener", :group => :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

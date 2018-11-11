@@ -3,13 +3,13 @@
 <h5 >Personal Information: </h5>
 
   <div  >
-     First Name<%= f.label :firstName %><br />
+     First Name:
                 <%= f.text_field :firstName %>
         
   </div>
   
   <div  >
-    Last Name<%= f.label :lastName %><br />
+    Last Name:
                 <%= f.text_field :lastName %>
   </div>
    <div  >
@@ -25,15 +25,32 @@
                 <%= f.text_field :phone %>
   </div>
   <div >
-   City<%= f.label :city %><br />
+City
         <%= f.select :city ,['Riyadh', "Khobar", "Jeddah"] %>
 
                 
   </div>
 <h5>Pregnancy and Delivery:</h5>
-   <%= f.label :pregcase1 %><br />
-    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
 
+<div>
+Was your child born full term?<%= f.label :pregcase1 %><br />
+    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+</div>
+
+<div>
+Was your child born full term?<%= f.label :pregcase1 %><br />
+    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+</div>
+
+<div>
+Was your child born full term?<%= f.label :pregcase1 %><br />
+    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+</div>
+
+<div>
+Was your child born full term?<%= f.label :pregcase1 %><br />
+    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+</div>
 
 
 
