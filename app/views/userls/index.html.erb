@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Userls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Login</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @userls.each do |userl| %>
+      <tr>
+        <td><%= userl.name %></td>
+        <td><%= userl.email %></td>
+        <td><%= userl.login %></td>
+        <td><%= link_to 'Show', userl %></td>
+        <td><%= link_to 'Edit', edit_userl_path(userl) %></td>
+        <td><%= link_to 'Destroy', userl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Userl', new_userl_path %>

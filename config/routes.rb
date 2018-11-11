@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
  
+  resources :userls
   resources :posts
   resources :experts
   resources :services
