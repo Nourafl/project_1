@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
  
-  resources :userls
+
+  resources :reservations
   resources :posts
   resources :experts
   resources :services

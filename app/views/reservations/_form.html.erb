@@ -1,0 +1,41 @@
+<%= form_for @reservation do |f| %>
+
+<h5 >Personal Information: </h5>
+
+  <div  >
+     First Name<%= f.label :firstName %><br />
+                <%= f.text_field :firstName %>
+        
+  </div>
+  
+  <div  >
+    Last Name<%= f.label :lastName %><br />
+                <%= f.text_field :lastName %>
+  </div>
+   <div  >
+    Date Of Birth <%= f.label :dob %><br />
+                    <%= f.date_field :dob%>
+  </div>
+  <div  >
+    Email: <%= f.label :email %><br />
+                <%= f.email_field :email %>
+  </div>
+  <div  >
+    Phone Number<%= f.label :phone %><br />
+                <%= f.text_field :phone %>
+  </div>
+  <div >
+   City<%= f.label :city %><br />
+        <%= f.select :city ,['Riyadh', "Khobar", "Jeddah"] %>
+
+                
+  </div>
+<h5>Pregnancy and Delivery:</h5>
+   <%= f.label :pregcase1 %><br />
+    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+
+
+
+
+  <%= f.submit %>
+<% end %>

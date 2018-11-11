@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  dob: 
+  city: MyString
+  email: MyString
+  phone: 1
+  pregcase1: false
+  healthproblem: false
+  pregcase2: false
+  motordevelopment: false
+  languagedevelopment: false
+  wordshas: 1
+  interventionreceived: false
+  regresskills: false
+  medicalissue: false
+  repetitivebehav: false
+  socialinteraction: false
+  eyecontact: false
+  gesture: false
+  comment: MyText
+
+two:
+  firstName: MyString
+  lastName: MyString
+  dob: 
+  city: MyString
+  email: MyString
+  phone: 1
+  pregcase1: false
+  healthproblem: false
+  pregcase2: false
+  motordevelopment: false
+  languagedevelopment: false
+  wordshas: 1
+  interventionreceived: false
+  regresskills: false
+  medicalissue: false
+  repetitivebehav: false
+  socialinteraction: false
+  eyecontact: false
+  gesture: false
+  comment: MyText

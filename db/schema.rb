@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_141116) do
+ActiveRecord::Schema.define(version: 2018_11_11_074053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,12 +25,38 @@ ActiveRecord::Schema.define(version: 2018_11_07_141116) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "expert_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string "firstName"
+    t.string "lastName"
+    t.date "dob"
+    t.string "city"
+    t.string "email"
+    t.integer "phone"
+    t.boolean "pregcase1"
+    t.boolean "healthproblem"
+    t.boolean "pregcase2"
+    t.boolean "motordevelopment"
+    t.boolean "languagedevelopment"
+    t.integer "wordshas"
+    t.boolean "interventionreceived"
+    t.boolean "regresskills"
+    t.boolean "medicalissue"
+    t.boolean "repetitivebehav"
+    t.boolean "socialinteraction"
+    t.boolean "eyecontact"
+    t.boolean "gesture"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
