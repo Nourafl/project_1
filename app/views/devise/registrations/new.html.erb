@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+<h3> Log In Information</h3>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -22,10 +22,43 @@
   </div>
   <div>
   
+  <h3>Contact Information</h3>
+  <div  >
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  
+  <div  >
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+   <div  >
+    <%= f.label :gender %><br />
+    <%= f.select :gender,  ['female', 'male', ] %>
+  </div>
+  
+  <div  >
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number %>
+  </div>
+  
+  
+  <div  >
+    <%= f.label :city %><br />
+    <%= f.select :city,  ['Riyadh', 'Khobar', 'Jeddah'] %>
+  </div>
+  
+
+
+
+
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
+
+
 <% end %>
 
 <%= render "devise/shared/links" %>

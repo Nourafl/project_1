@@ -9,7 +9,7 @@
 
 
 Service.destroy_all
-behav = Service.create(name:"Behavior Change Program")
+behav = Service.create(name:"Behavior Modification Program")
 speech = Service.create(name: "Speech language pathology")
 occup = Service.create(name: "Occupational Therapy")
 

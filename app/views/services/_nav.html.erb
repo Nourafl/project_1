@@ -1,0 +1,44 @@
+<nav class="nav-wrapper cyan darken-3 ">
+
+    <div >
+        <a href="#" class="brand-logo right">Logo</a>
+            <div class="left hide-on-med-and-down">
+               <ul id="dropdown1" class="dropdown-content cyan darken-2"> 
+                <% if user_signed_in? %>
+                   <li> <%= link_to "View Profile ", user_path(current_user) %> </li>
+                   <li> <%= link_to 'Log Out', destroy_user_session_path, method: :delete %> </li>
+                   <li class="divider"></li>
+                <% else %>
+                   <li> <%= link_to "Log in", new_user_session_path %> </li>
+                   <li> <%= link_to "Sign Up", new_user_registration_path %> </li>
+                <% end %> 
+                </ul> 
+    <nav>
+                  <div class="nav-wrapper">
+  
+            <ul class="right hide-on-med-and-down cyan darken-2">
+                 <li><%= link_to " Home ", root_path %></li>
+                 <li><%= link_to " Services ", services_path %></li>
+                 <li><%= link_to " Our Partners ", experts_path %></li>
+                 <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                        <!-- Dropdown Trigger -->
+                <li>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown1">
+                <% if current_user.first_name  %>
+                    <%= current_user.first_name %>
+                <% else%>  
+                    Log In!
+                <% end %> 
+                <i class="material-icons right"></i></a>
+                </li>
+            </ul>
+                </div>
+    </nav>
+        
+                     
+                  
+            </div> 
+    </div>        
+ 
+ </nav> 

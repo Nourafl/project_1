@@ -1,9 +1,9 @@
 <%  @experts.each do |expert| %>
-    <div>
-        <h3><%= link_to expert.name, expert_path(expert) %> </h3>
-        <%= expert.major %> <br>
-        <%= expert.bio %> <br>
-        <%= expert.major %> <br>
+    <div class="row">
+        <h5><%= link_to expert.name, expert_path(expert) %> </h5>
+      <div class="col s7 divider ">  <%= expert.major %>  </div>
+       <div class="col s7 "> <%= expert.bio %> </div>
+       <div class="col s7 "> <%= expert.major %> </div>
     </div>
 <% end %>
 
