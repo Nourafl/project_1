@@ -16,12 +16,12 @@
 
 //= require jquery
 
-//= require_tree .
-$(document).on('turbolinks:load', function () {
-$(".dropdown-trigger").dropdown();
-    // $("div:contains('Early Intervention')").css("text-decoration", "underline");
-});
+// //= require_tree .
+// $(document).ready(function () {
+// $(".dropdown-trigger").dropdown();
+//     // $("div:contains('Early Intervention')").css("text-decoration", "underline");
+// });
 
-$(document).ready(function () {
-    $('select').formSelect();
-});
+// $(document).ready(function () {
+//     $('select').formSelect();
+// });

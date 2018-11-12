@@ -1,4 +1,5 @@
 class ExpertsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :index]
   def index
     @experts = Expert.all
   end

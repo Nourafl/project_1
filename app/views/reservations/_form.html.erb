@@ -33,26 +33,65 @@ City
 <h5>Pregnancy and Delivery:</h5>
 
 <div>
-Was your child born full term?<%= f.label :pregcase1 %><br />
+    <%= f.label :pregcase1 , "Was your child born full term?" %><br />
     <%= f.select :pregcase1 ,[ "Yes", "No"] %>
 </div>
 
 <div>
-Was your child born full term?<%= f.label :pregcase1 %><br />
-    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+<%= f.label :healthproblem, "Were there any complications or health problems during pregnancy?"%><br />
+    <%= f.select :healthproblem ,[ "Yes", "No"] %>
+</div>
+<div>
+<%= f.label :pregcase2, "Were there any complications during delivery (i.e. Oxygen deprivation, umbilical cord knots)? " %><br />
+    <%= f.select :pregcase2 ,[ "Yes", "No"] %>
+</div>
+
+<h5> Child's Development: </h5>
+<div>
+<%= f.label :motordevelopment, "Was your child's motor development:" %><br />
+    <%= f.select :motordevelopment ,[ "Normal", "Delayed"] %>
 </div>
 
 <div>
-Was your child born full term?<%= f.label :pregcase1 %><br />
-    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+<%= f.label :languagedevelopment, "Was your child's language development:" %><br />
+    <%= f.select :languagedevelopment ,[ "Normal", "Delayed"] %>
 </div>
-
 <div>
-Was your child born full term?<%= f.label :pregcase1 %><br />
-    <%= f.select :pregcase1 ,[ "Yes", "No"] %>
+<%= f.label :wordshas, "How many words does your child use?" %><br />
+    <%= f.number_field :wordshas %>
+</div>
+<div>
+    <%= f.label :interventionreceived, "Has the child received any type of intervention?  " %><br />
+    <%= f.select :interventionreceived ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :regresskills, "Did your child regress in the skills he acquired (words and social interaction)? " %><br />
+    <%= f.select :regresskills ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :medicalissue, "Were there any medical issues during the regression or before it (i.e. continuous fever, head injury, consciousness or vomiting)? " %><br />
+    <%= f.select :medicalissue ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :repetitivebehav, "Does your child exhibit stereotyped/repetitive behaviors (hand flapping, jumping, spinning...etc)? " %><br />
+    <%= f.select :repetitivebehav ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :socialinteraction, "Does your child lack social interaction? " %><br />
+    <%= f.select :socialinteraction ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :eyecontact, "Does your child have normal eye-contact with others? " %><br />
+    <%= f.select :eyecontact ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :gesture, "Does your child exhibit gestures (i.e. pointing, giving ...)?" %><br />
+    <%= f.select :gesture ,[ "Yes", "No"] %>
+</div>
+<div>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment  %>
 </div>
 
-
-
-  <%= f.submit %>
+  <%= f.submit "submit request"%>
 <% end %>

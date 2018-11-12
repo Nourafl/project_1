@@ -9,6 +9,8 @@ gem "letter_opener", :group => :development
 gem 'rails', '~> 5.2.1'
 
 gem 'devise'
+gem 'cloudinary'
+gem 'rest-client', '~> 2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
