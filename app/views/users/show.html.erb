@@ -1,5 +1,5 @@
 <div class = "container">
-welcome <%= @user.first_name %> <%= @user.last_name %>
+Welcome <%= @user.first_name %> <%= @user.last_name %>
 <br>
 
 
@@ -17,13 +17,18 @@ welcome <%= @user.first_name %> <%= @user.last_name %>
     </div>
 </section>
 
-<ul>
+
     <% @user.reservations.each do |reservation| %>
     <% if reservation.expert %>
-        <li>
-           You Have  Reservation with:   <%= reservation.expert.name %> <%= link_to "Edit", edit_reservation_path(reservation) %> <%= link_to "Delete", reservation_path(reservation) , method: :delete  %> 
-        </li>
+        
+            <h6 >You have  reservation with:  <span class="cyan-text"> <%= reservation.expert.name %> </span>  </h6>
+           <h6> Reservation Reference  <span class="cyan-text"><%=reservation.id  %></span>  <h6>
+           
+          <button class="green "> <%= link_to "Edit", edit_reservation_path(reservation) %> </button> 
+          <button class= "red"><%= link_to "Delete", reservation_path(reservation)  ,method: :delete  %> </button> 
+        
+       
         <% end %>
     <% end %>
-</ul>
+
 </div>

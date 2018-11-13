@@ -39,7 +39,7 @@ font-family: "rakkas";
 font-size: 60px;
 }
 
-h5 , .nnn{
+h5 , .nabout, .nnn{
  font-family: "Sniglet";
 }
 p , .p{
@@ -48,7 +48,9 @@ p , .p{
    
    
 }
-
+#about{
+    font-family: 'Crimson Text', serif;
+}
 footer{
        width:100%;
        display: fixed;
@@ -83,5 +85,16 @@ margin: 0;
     background: lightgray;
     padding: 0px;
     width: 180px;
+}
+
+.noracolor:hover  {
+    background: rgba(243, 233, 91, 0.671);
+  animation: "bounce";  
+}
+.nabout {
+    border-style: rounded;
+    background: #efefef;
+    padding: 15px;
+    shadow: #2779e4;
 }
 
