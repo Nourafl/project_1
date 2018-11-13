@@ -6,15 +6,17 @@ class ReservationsController < ApplicationController
 
   def show
 @reservation = Reservation.find_by(id: params[:id])
+
   end
 
  def new
-@reservation = Reservation.new
+  @expert = Expert.find_by(id: session[:expert_id])
+  @reservation = Reservation.new
   end
 def create
 reservation = current_user.reservations.create reservation_params
 
-  redirect_to services_path 
+  redirect_to booked_path 
 end
   def edit 
 
@@ -22,7 +24,7 @@ end
 private
 
   def reservation_params
-    params.require(:reservation).permit(:firstName, :lastName, :dob, :city, :email, :phone, :pregcase1, :healthproblem, :pregcase2, :motordevelopment, :languagedevelopment, :wordshas, :interventionreceived, :regresskills, :medicalissue, :repetitivebehav, :socialinteraction, :eyecontact, :gesture, :comment)
+    params.require(:reservation).permit(:expert_id, :firstName, :lastName, :dob, :city, :email, :phone, :pregcase1, :healthproblem, :pregcase2, :motordevelopment, :languagedevelopment, :wordshas, :interventionreceived, :regresskills, :medicalissue, :repetitivebehav, :socialinteraction, :eyecontact, :gesture, :comment)
   end
 
 end

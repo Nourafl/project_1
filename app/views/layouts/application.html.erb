@@ -4,23 +4,42 @@
     <title>Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
   </head>
 
 
   <body>
 
-  
+  <header>
 <%= render partial: 'services/nav' %>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-    <div class="container">
+    </header>
+
+<main>
     <%= yield %>
-    </div>
+    </main>
+    
+    
+            <footer class="page-footer cyan darken-2">
+          
+          <div class="footer-copyright">
+           
+             Copyright © 2018 Awon.org.sa All Rights Reserved.
+            
+            </div>
+         
+        </footer>
+
+    
   </body>
 </html>
-<% console %>

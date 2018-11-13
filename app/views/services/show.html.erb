@@ -2,9 +2,21 @@
 
 
 
-<%= @Service.name %> 
+<h5 class="cyan-text"> <%= @Service.name %> </h5>
 <br>
 <% @Service.experts.each do |expert| %>
-    <li>  <%= link_to "#{expert.name}", expert_path(expert) %> </li>
-<% end %>
-
+  <div class="row">
+    <div class="col s5   ">
+      <div class="card noracolor">
+        <div class="card-content cyan-text">
+          <span class="card-title"><%= expert.name %></span>
+          <p class="black-text"><%= expert.bio %></p>
+        </div>
+        <div class="card-action">
+    
+         <p class="black-text">  <%= link_to "More", expert_path(expert) %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ <% end %>

@@ -1,8 +1,24 @@
+
+<div class="container">
+
+<h5 class ="cyan-text"> Choose Service :  </h5>
+
+</div>
+
 <%  @services.each do |service| %>
 
-    <div>
-    <ul>
-        <li><%=  link_to service.name, service_path(service) %> </li><br>
-    </ul> 
-    </div>
+    
+
+<div class=container>
+    
+        <div class="row">
+            <div class= " co s9 ">
+                <button class=" waves-effect btn-large   yellow darken-1 carousel-item"> <%=  link_to service.name, service_path(service) %> </button>
+            </div>
+        </div>
+    
+</div> 
+
 <% end %>
+
+<img src="rsz_bgballoon.jpg" >

@@ -1,7 +1,11 @@
+
+<div class= "container">
 <%= form_for @reservation do |f| %>
+<h5 class = " amber-text" >Book session with <%= @expert.name %></h5>
+<div class="divider"> </div>
+<h5 class = "cyan-text" >Personal Information: </h5>
 
-<h5 >Personal Information: </h5>
-
+<%= hidden_field_tag "reservation[expert_id]", @expert.id%>
   <div  >
      First Name:
                 <%= f.text_field :firstName %>
@@ -13,85 +17,91 @@
                 <%= f.text_field :lastName %>
   </div>
    <div  >
-    Date Of Birth <%= f.label :dob %><br />
+    Date Of Birth 
                     <%= f.date_field :dob%>
   </div>
   <div  >
-    Email: <%= f.label :email %><br />
+    Email: 
                 <%= f.email_field :email %>
   </div>
   <div  >
-    Phone Number<%= f.label :phone %><br />
+    Phone Number
                 <%= f.text_field :phone %>
+  
   </div>
-  <div >
-City
-        <%= f.select :city ,['Riyadh', "Khobar", "Jeddah"] %>
-
-                
-  </div>
-<h5>Pregnancy and Delivery:</h5>
 
 <div>
-    <%= f.label :pregcase1 , "Was your child born full term?" %><br />
+   Choose your city 
+    <%= f.select :city ,[ "Riyadh", "Khobar", "Jeddah"] %>
+</div>
+
+<h5 class = "cyan-text">Pregnancy and Delivery:</h5>
+
+<div>
+   Was your child born full term?
     <%= f.select :pregcase1 ,[ "Yes", "No"] %>
 </div>
 
 <div>
-<%= f.label :healthproblem, "Were there any complications or health problems during pregnancy?"%><br />
+Were there any complications or health problems during pregnancy?
     <%= f.select :healthproblem ,[ "Yes", "No"] %>
 </div>
 <div>
-<%= f.label :pregcase2, "Were there any complications during delivery (i.e. Oxygen deprivation, umbilical cord knots)? " %><br />
+Were there any complications during delivery (i.e. Oxygen deprivation, umbilical cord knots)? 
     <%= f.select :pregcase2 ,[ "Yes", "No"] %>
 </div>
 
-<h5> Child's Development: </h5>
+<h5 class = "cyan-text"> Child's Development: </h5>
 <div>
-<%= f.label :motordevelopment, "Was your child's motor development:" %><br />
+Was your child's motor development:
     <%= f.select :motordevelopment ,[ "Normal", "Delayed"] %>
 </div>
 
 <div>
-<%= f.label :languagedevelopment, "Was your child's language development:" %><br />
+Was your child's language development:
     <%= f.select :languagedevelopment ,[ "Normal", "Delayed"] %>
 </div>
 <div>
-<%= f.label :wordshas, "How many words does your child use?" %><br />
+How many words does your child use?
     <%= f.number_field :wordshas %>
 </div>
 <div>
-    <%= f.label :interventionreceived, "Has the child received any type of intervention?  " %><br />
+Has the child received any type of intervention?  
     <%= f.select :interventionreceived ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :regresskills, "Did your child regress in the skills he acquired (words and social interaction)? " %><br />
+Did your child regress in the skills he acquired (words and social interaction)? 
     <%= f.select :regresskills ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :medicalissue, "Were there any medical issues during the regression or before it (i.e. continuous fever, head injury, consciousness or vomiting)? " %><br />
+ Were there any medical issues during the regression or before it (i.e. continuous fever, head injury, consciousness or vomiting)? 
     <%= f.select :medicalissue ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :repetitivebehav, "Does your child exhibit stereotyped/repetitive behaviors (hand flapping, jumping, spinning...etc)? " %><br />
+Does your child exhibit stereotyped/repetitive behaviors (hand flapping, jumping, spinning...etc)? 
     <%= f.select :repetitivebehav ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :socialinteraction, "Does your child lack social interaction? " %><br />
+   Does your child lack social interaction?  <br />
     <%= f.select :socialinteraction ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :eyecontact, "Does your child have normal eye-contact with others? " %><br />
+Does your child have normal eye-contact with others? 
     <%= f.select :eyecontact ,[ "Yes", "No"] %>
 </div>
 <div>
-    <%= f.label :gesture, "Does your child exhibit gestures (i.e. pointing, giving ...)?" %><br />
+Does your child exhibit gestures (i.e. pointing, giving ...)?
     <%= f.select :gesture ,[ "Yes", "No"] %>
 </div>
 <div>
     <%= f.label :comment %><br />
     <%= f.text_area :comment  %>
 </div>
-
+<button class="btn waves-effect yellow darken-1" type="submit" name="action"> 
   <%= f.submit "submit request"%>
+  </button>
 <% end %>
+<div>
+</div>
+
+</div>

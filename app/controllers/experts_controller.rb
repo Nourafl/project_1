@@ -6,6 +6,7 @@ class ExpertsController < ApplicationController
 
   def show
     @expert = Expert.find_by(id: params[:id])
+    session[:expert_id] = @expert.id
   end
 
   def edit

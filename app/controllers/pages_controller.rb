@@ -5,5 +5,7 @@ class PagesController < ApplicationController
 def about
   
 end
-
+def booked
+  
+end
 end

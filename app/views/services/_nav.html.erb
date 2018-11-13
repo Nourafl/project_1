@@ -1,9 +1,10 @@
-<nav class="nav-wrapper cyan darken-3 ">
 
-    <div >
-        <a href="#" class="brand-logo right">Logo</a>
-            <div class="left hide-on-med-and-down">
-               <ul id="dropdown1" class="dropdown-content cyan darken-2"> 
+    <nav class="rar nav-wrapper cyan darken-3 ">
+
+    <div  >
+        <a href="#" class=" logo  left">  عوَن </a>
+            <div class="right hide-on-med-and-down" >
+               <ul id="dropdown1" class="dropdown-content cyan darken-4"> 
                 <% if user_signed_in? %>
                    <li> <%= link_to "View Profile ", user_path(current_user) %> </li>
                    <li> <%= link_to 'Log Out', destroy_user_session_path, method: :delete %> </li>
@@ -13,10 +14,10 @@
                    <li> <%= link_to "Sign Up", new_user_registration_path %> </li>
                 <% end %> 
                 </ul> 
-    <nav>
-                  <div class="nav-wrapper">
+        
+                  <div class="nav-wrapper" id="navS">
   
-            <ul class="right hide-on-med-and-down cyan darken-2">
+            <ul class="right hide-on-med-and-down  cyan darken-2 white-text">
                  <li><%= link_to " Home ", root_path %></li>
                  <li><%= link_to " Services ", services_path %></li>
                  <li><%= link_to " Our Partners ", experts_path %></li>
@@ -34,7 +35,7 @@
                 </li>
             </ul>
                 </div>
-    </nav>
+    
         
                      
                   
@@ -42,3 +43,4 @@
     </div>        
  
  </nav> 
+ 

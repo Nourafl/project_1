@@ -13,5 +13,75 @@
  *= require_tree .
  *= require_self
  */
+body {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(".jpg");
+    background-size: 500;
+   
+}
 
+main {
+    flex: 1 0 auto; /* flex-grow flex-shrink flex-basis */
+}
+
+#navS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+
+font-family: "rakkas";
+font-size: 60px;
+}
+
+h5 , .nnn{
+ font-family: "Sniglet";
+}
+p , .p{
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 20px;
+   
+   
+}
+
+footer{
+       width:100%;
+       display: fixed;
+       bottom: 0px;
+       text-align: center; 
+}
+.nnn {
+ font-family: "Sniglet";
+ font-size: 40px;
+
+}
+
+nav:rar{
+position: fixed;
+margin: 0;
+} 
+#cenpage {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.flex {
+    display: flex;
+    background-color: #efefef;
+}
+
+.ei-centers {
+    position: absolute;
+    background: lightgray;
+    padding: 0px;
+    width: 180px;
+}
 

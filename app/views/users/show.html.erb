@@ -1,4 +1,27 @@
 welcome <%= @user.first_name %> <%= @user.last_name %>
+<br>
 
- 
-You have <%=  %> Pending reservation
+
+
+
+<section class="selection ">
+    <div class="row">
+        <div class="col s4">
+            <div class="collection ">
+                <p class=" cyan-text collection-item"> Last log in <span class="badge " > <%= @user.last_seen_at.strftime "%B %d, %Y"  %>   </span></p>
+               
+                <p class=" cyan-text collection-item"> Pending reservations <span class="badge red white-text" > <%= @user.reservations.count %>   </span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ul>
+    <% @user.reservations.each do |reservation| %>
+    <% if reservation.expert %>
+        <li>
+            <%= reservation.expert.name %>
+        </li>
+        <% end %>
+    <% end %>
+</ul>

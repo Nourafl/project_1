@@ -1,13 +1,22 @@
-<h2> <%= @expert.major  %></h2>
 
-<h3>
-<%= @expert.name %>
-</h3>
+<% if @expert.name === "Nora Alsubaie" %>
+    <aside>
+        <div class=" LI-profile-badge right"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="nora-alsubaie-579049160"><a class="LI-simple-link" href='https://sa.linkedin.com/in/nora-alsubaie-579049160?trk=profile-badge'>Nora Alsubaie</a></div>
 
-<p><%= @expert.bio %></p>
-    <button class="btn waves-effect waves-light" type="submit" name="action"> 
-        <%= button_to "Book A Session", new_reservation_path, :method => "get" %>
-        <i class="material-icons right">send</i>  
+    </aside>
+<% end %>
+<div class = "container">
+    <h5> <%= @expert.name %></h5>
+
+    <h6><%= @expert.major  %></h6>
+    <div class="divider"></div>
+    <p><%= @expert.bio %></p>
+    <button class="btn waves-effect yellow darker-2" type="submit" name="action"> 
+        <%= button_to "Book A Session", new_reservation_path, method: "get" %>
+            <i class="material-icons right">send</i>  
     </button>
 
+ </div> 
+ <div> <h1></h1></div>
 
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>

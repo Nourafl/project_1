@@ -13,15 +13,38 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require_tree .
 
-//= require jquery
 
-// //= require_tree .
-// $(document).ready(function () {
-// $(".dropdown-trigger").dropdown();
-//     // $("div:contains('Early Intervention')").css("text-decoration", "underline");
-// });
+$(document).ready(function () {
+    console.log("jQuery connected!")
+    // $(".dropdown-trigger").dropdown();
+    //     // $("div:contains('Early Intervention')").css("text-decoration", "underline");
+});
 
 // $(document).ready(function () {
 //     $('select').formSelect();
 // });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     var elems = document.querySelectorAll('select');
+//     var instances = M.FormSelect.init(elems);
+// });
+
+document.addEventListener('turbolinks:load', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+
+});
+
+
+
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
+
+
+
+

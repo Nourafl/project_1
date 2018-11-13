@@ -1,3 +1,5 @@
+
+<div class="container">
 <%  @experts.each do |expert| %>
     <div class="row">
         <h5><%= link_to expert.name, expert_path(expert) %> </h5>
@@ -7,6 +9,7 @@
     </div>
 <% end %>
 
+</div>
 
 
-<%= link_to 'google', services_path %>
+
