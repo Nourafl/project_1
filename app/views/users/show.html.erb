@@ -1,3 +1,4 @@
+<div class = "container">
 welcome <%= @user.first_name %> <%= @user.last_name %>
 <br>
 
@@ -20,8 +21,9 @@ welcome <%= @user.first_name %> <%= @user.last_name %>
     <% @user.reservations.each do |reservation| %>
     <% if reservation.expert %>
         <li>
-            <%= reservation.expert.name %>
+           You Have  Reservation with:   <%= reservation.expert.name %> <%= link_to "Edit", edit_reservation_path(reservation) %> <%= link_to "Delete", reservation_path(reservation) , method: :delete  %> 
         </li>
         <% end %>
     <% end %>
 </ul>
+</div>

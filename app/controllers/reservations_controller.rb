@@ -19,8 +19,20 @@ reservation = current_user.reservations.create reservation_params
   redirect_to booked_path 
 end
   def edit 
-
+    @expert = Expert.find_by(id: session[:expert_id])
+      @reservation = Reservation.find_by(id: params[:id])
   end
+   def update
+    reservation = Reservation.find_by(id: params[:id])
+    reservation.update(reservation_params)
+    redirect_to reservation_path(reservation) 
+  end
+   def destroy
+    reservation = Reservation.find_by(id: params[:id])
+    reservation.destroy
+    redirect_to user_path(current_user)
+  end
+
 private
 
   def reservation_params
@@ -28,3 +40,7 @@ private
   end
 
 end
+
+
+
+ 
