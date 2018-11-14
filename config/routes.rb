@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
- get 'booked' => 'pages#booked' 
- get 'contact' => 'pages#contact'
-  get 'about' => 'pages#about'
+ get '/booked' => 'pages#booked' 
+ get '/contact' => 'pages#contact'
+  get '/about' => 'pages#about'
   resources :reservations
   resources :posts
   resources :experts
