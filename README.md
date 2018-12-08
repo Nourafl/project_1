@@ -10,8 +10,7 @@ This Application is created to cover the needs for EI services.
 
 * Ruby version
 2.5.3
-* System dependencies
-herokuapp
+
 * Database creation
 PostgreSQL 11
 
