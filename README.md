@@ -1,24 +1,18 @@
-# README modifird
+# Awon Early Intervention Srevices 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Full stack  web application  has four main models
+* Expert
+* Reservation 
+* Service 
+* User.
+## Motivation
+This Application is created to cover the needs for EI services. 
 
 * Ruby version
-
+2.5.3
 * System dependencies
-
-* Configuration
-
+herokuapp
 * Database creation
+PostgreSQL 11
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
